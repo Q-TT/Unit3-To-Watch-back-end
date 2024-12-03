@@ -1,7 +1,14 @@
+////////////////////////
+// Setup - Import deps and create app object
+////////////////////////
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 
+
+//////////////////////
+// Write the routes here
+//////////////////////
 router.get('/sign-token', (req, res) => {
 
     const user = {

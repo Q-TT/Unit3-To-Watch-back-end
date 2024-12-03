@@ -1,3 +1,6 @@
+////////////////////////
+// Setup - Import deps and create app object
+////////////////////////
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
@@ -6,6 +9,10 @@ const jwt = require('jsonwebtoken');
 
 const SALT_LENGTH = 10;
 
+
+//////////////////////
+// Write the routes here
+//////////////////////
 router.post('/signup', async (req, res) => {
     try {
         // Check if the username is already taken
