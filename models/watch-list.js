@@ -64,6 +64,10 @@ const watchListSchema = new mongoose.Schema(
         likes: {
             type: Array, 
         },
+        author: { 
+            type: mongoose.Schema.Types.ObjectId, 
+            ref: 'User' 
+        },
         comments: [commentSchema]
     }, 
     { timestamps: true }

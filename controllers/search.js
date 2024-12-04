@@ -10,8 +10,6 @@ const mongoose = require("mongoose")
 //////////////////////
 // Declare Middleware
 //////////////////////
-router.use(express.urlencoded({extended:true}))
-//! do I need this ??
 
 //////////////////////
 // Write the routes here

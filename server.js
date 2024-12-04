@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const testJWTRouter = require('./controllers/test-jwt');
 const usersRouter = require('./controllers/users');
 const searchRouter = require("./controllers/search")
+const watchListRouter = require("./controllers/watch-list")
 
 
 mongoose.connect(process.env.MONGODB_URI);
@@ -21,10 +22,10 @@ app.use(express.json());
 app.use('/test-jwt', testJWTRouter);
 app.use('/users', usersRouter);
 app.use('/search', searchRouter);
+app.use('/watch-list', watchListRouter);
 
 
-
-
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
     console.log('The express app is ready!');
 });
