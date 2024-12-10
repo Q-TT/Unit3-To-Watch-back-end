@@ -20,44 +20,19 @@ const commentSchema = new mongoose.Schema(
 
 const watchListSchema = new mongoose.Schema(
     {
-        title: {
+        Title: {
             type: String,
             required: true,
         },
-        year: {
-            type: Number,
-            required: true,
-        },
-        country: {
+        Year: {
             type: String,
             required: true,
         },
-        language: {
+        Type: {
             type: String,
             required: true,
         },
-        category: {
-            type: String,
-            required: true,
-            enum: ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', "Documentary", "Drama", "Family", "Fantasy", "Film-Noir", "Game-Show", "History", "Horror", "Music","Musical", "Mystery", "News", "Reality-TV", "Romance","Sci-Fi", "Short","Sport","Talk-show","Thriller","War","Western"],
-        },
-        plot: {
-            type: String,
-            required: true,
-        },
-        director: {
-            type: String,
-            required: true,
-        },
-        actors: {
-            type: String,
-            required: true,
-        },
-        imdbRating: {
-            type: Number,
-            required: true,
-        },
-        review: {
+        Review: {
             type: String,
             required: true,
         },
@@ -68,7 +43,7 @@ const watchListSchema = new mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId, 
             ref: 'User' 
         },
-        comments: [commentSchema]
+        Comments: [commentSchema]
     }, 
     { timestamps: true }
   );
